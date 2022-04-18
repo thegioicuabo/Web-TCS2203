@@ -1,4 +1,9 @@
-
+<?php
+$con = mysqli_connect('localhost','root','','user');
+$sql = "select * from post";
+$res = mysqli_query($con,$sql);
+$row = mysqli_fetch_assoc($res);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +22,59 @@
                     <div class="card">
                     
                         <div class="card-header">
-                            <h4>Music</h4>
+                            <h2></h2>
                         </div>
                         <div class="card-body">
-                        Nơi này có anh – Sơn Tùng M-TP	
+                            <h3><?php 
+                            $row=1;
+                            $form=0;
+                            $sql="SELECT * FROM post LIMIT $form,$row";
+                            $result=$con->query($sql);
+                            while($row=$result->fetch_assoc()){ 
+                            echo $row['type'].": ";
+                            echo $row['description'];
+                            }?></h3> 
+
+                            <h3><?php 
+                            $row=1;
+                            $form=1;
+                            $sql="SELECT * FROM post LIMIT $form,$row";
+                            $result=$con->query($sql);
+                            while($row=$result->fetch_assoc()){
+                            echo $row['type'].": ";
+                            echo $row['description'];
+                            }?></h3> 
+
+<h3><?php 
+                            $row=1;
+                            $form=2;
+                            $sql="SELECT * FROM post LIMIT $form,$row";
+                            $result=$con->query($sql);
+                            while($row=$result->fetch_assoc()){
+                            echo $row['type'].": ";
+                            echo $row['description'];
+                            }?></h3> 
+
+<h3><?php 
+                            $row=1;
+                            $form=3;
+                            $sql="SELECT * FROM post LIMIT $form,$row";
+                            $result=$con->query($sql);
+                            while($row=$result->fetch_assoc()){
+                            echo $row['type'].": ";
+                            echo $row['description'];
+                            }?></h3> 
+
+<h3><?php 
+                            $row=1;
+                            $form=4;
+                            $sql="SELECT * FROM post LIMIT $form,$row";
+                            $result=$con->query($sql);
+                            while($row=$result->fetch_assoc()){
+                            echo $row['type'].": ";
+                            echo $row['description'];
+                            }?></h3> 
+                            
                         <hr>
                             <div class="main-comment">
                                     <div id="error_status"></div>
@@ -38,7 +92,6 @@
             </div>
         </div>
     </div>
-
 
 </body>
 </html>

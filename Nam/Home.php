@@ -58,7 +58,7 @@
     <section class = "design" id = "design">
       <div class = "container">
         <div class = "title">
-          <h2>View Post With The Most Hearts.</h2>
+          <h2>View Post With The Most Views.</h2>
           <p>♥♥♥ recent post on the blog ♥♥♥</p>
         </div>
 

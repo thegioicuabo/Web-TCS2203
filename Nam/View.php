@@ -39,7 +39,7 @@
             </div>
             <a href = "Post.php"><i class="fa fa-arrow-up"></i>post</a>
             <a href = "View.php"><i class="fa fa-eye"></i>view</a>
-            <a href = "about.html"><i class="fa fa-address-card"></i>about</a>
+            <a href = "about.php"><i class="fa fa-address-card"></i>about</a>
           </div>
         </div>
   </nav>
@@ -54,7 +54,7 @@
                 <td><a href="blogcomment.php">Link</td>   
 </tr>
 <?php
-$conn= new mysqli('localhost','root','','idea');
+$conn= new mysqli('localhost','root','','user');
 if(isset($_GET['pages'])){
 $pages =$_GET['pages'];
 }else{

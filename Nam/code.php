@@ -74,8 +74,6 @@ if(isset($_POST['add_reply']))
 }
 
 
-
-
 if(isset($_POST['comment_load_data']))
 {
     $comments_query = "SELECT * FROM comments";

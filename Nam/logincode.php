@@ -24,6 +24,11 @@ include('connect.php');
 				header('Location:Home.php');
 				exit();
 			}
+			else if($userdata["usertype"]=="Q&A coordinator")
+			{
+				header('Location:type.php');
+				exit();
+			}
 		}
 		else{
 			header('Location:login.php');

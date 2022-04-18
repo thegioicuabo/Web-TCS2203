@@ -58,7 +58,7 @@ $conn= new mysqli('localhost','root','','user');
 if(isset($_GET['pages'])){
 $pages =$_GET['pages'];
 }else{
-	$pages =2;
+	$pages =5;
 
 }
 $row=5;

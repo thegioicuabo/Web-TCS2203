@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Addmin Page</title>
+    <title>Admin Page</title>
   </head>
     <body>
     <form method="post">
@@ -45,7 +45,13 @@
         </div>
         <div class="form-group">
             <label>UserType</label>
-            <input type="text" class="form-control"  placeholder="Your Type" name="usertype" autocomplete="off">
+            <div class="select-box">
+                    <select name="usertype" class="form-control" autocomplete="off">
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                        <option value="Q&A coordinator">Q&A coordinator</option>
+                    </select>
+            </div>
         </div>
         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </div>

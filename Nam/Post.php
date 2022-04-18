@@ -1,11 +1,11 @@
 <?php
 // dua du lieu vao db- ket noi db
-$conn= new mysqli('localhost','root','','idea');
+$conn= new mysqli('localhost','root','','user');
             if(isset($_POST['submit']))
             {
             if(isset($_POST['c']))
             {
-                $conn = new mysqli('localhost','root','','idea');
+                $conn = new mysqli('localhost','root','','user');
 // chèn du lieu
                 if(isset($_POST['submit']))
     {
@@ -147,7 +147,7 @@ $conn= new mysqli('localhost','root','','idea');
             </div>
             <a href = "Post.php"><i class="fa fa-arrow-up"></i>post</a>
             <a href = "View.php"><i class="fa fa-eye"></i>view</a>
-            <a href = "about.html"><i class="fa fa-address-card"></i>about</a>
+            <a href = "about.php"><i class="fa fa-address-card"></i>about</a>
           </div>
         </div>
   </nav>
@@ -163,8 +163,8 @@ $conn= new mysqli('localhost','root','','idea');
                      <div class="container1">
                 <div class="select-box">
                     <select name="type" class="form-control">
-                        <option value="Music">Music</option>
-                        <option value="Fashion">Fashion</option>
+                        <option value="Music">Music:</option>
+                        <option value="Fashion">Fashion:</option>
                         <option value="Game Esport">Game Esport</option>
                         <option value="Movie">Movie</option>
                         <option value="Sport">Sport</option>
@@ -178,7 +178,7 @@ $conn= new mysqli('localhost','root','','idea');
            <form action ="" method="post">
                 <input type="checkbox" name="c"> Term and Conditions 
             <br>
-            <input type="submit" name="submit" value="Submit"></input>
+            <input type="submit" <?php include('sendmail.php');?>  name="submit" value="Submit"></input>
             <br>
             </form> 
         </form>
